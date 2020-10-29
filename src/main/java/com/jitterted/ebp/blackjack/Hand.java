@@ -28,7 +28,7 @@ public class Hand {
         .anyMatch(card -> card.rankValue() == 1);
 
     // if the total hand value <= 11, then count the Ace as 11 by adding 10
-    if (hasAce && handValue < 11) {
+    if (hasAce && handValue <= 11) {
       handValue += 10;
     }
 
@@ -37,6 +37,10 @@ public class Hand {
 
   String displayFirstCard() {
     return cards.get(0).display();
+  }
+
+  boolean dealerMustDrawCard() {
+    return value() <= 16;
   }
 
   void display() {
@@ -52,10 +56,6 @@ public class Hand {
 
   boolean isBusted() {
     return value() > 21;
-  }
-
-  boolean dealerMustDrawCard() {
-    return value() <= 16;
   }
 
   boolean pushes(Hand hand) {
