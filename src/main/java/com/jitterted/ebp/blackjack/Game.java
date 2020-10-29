@@ -31,12 +31,12 @@ public class Game {
 
   private static void displayWelcomeScreen() {
     System.out.println(ansi()
-                           .bgBright(Ansi.Color.WHITE)
-                           .eraseScreen()
-                           .cursor(1, 1)
-                           .fgGreen().a("Welcome to")
-                           .fgRed().a(" Jitterted's")
-                           .fgBlack().a(" BlackJack"));
+            .bgBright(Ansi.Color.WHITE)
+            .eraseScreen()
+            .cursor(1, 1)
+            .fgGreen().a("Welcome to")
+            .fgRed().a(" Jitterted's")
+            .fgBlack().a(" BlackJack"));
   }
 
   public Game() {
@@ -130,16 +130,16 @@ public class Game {
 
   private void displayBackOfCard() {
     System.out.print(
-        ansi()
-            .cursorUp(7)
-            .cursorRight(12)
-            .a("┌─────────┐").cursorDown(1).cursorLeft(11)
-            .a("│░░░░░░░░░│").cursorDown(1).cursorLeft(11)
-            .a("│░ J I T ░│").cursorDown(1).cursorLeft(11)
-            .a("│░ T E R ░│").cursorDown(1).cursorLeft(11)
-            .a("│░ T E D ░│").cursorDown(1).cursorLeft(11)
-            .a("│░░░░░░░░░│").cursorDown(1).cursorLeft(11)
-            .a("└─────────┘"));
+            ansi()
+                    .cursorUp(7)
+                    .cursorRight(12)
+                    .a("┌─────────┐").cursorDown(1).cursorLeft(11)
+                    .a("│░░░░░░░░░│").cursorDown(1).cursorLeft(11)
+                    .a("│░ J I T ░│").cursorDown(1).cursorLeft(11)
+                    .a("│░ T E R ░│").cursorDown(1).cursorLeft(11)
+                    .a("│░ T E D ░│").cursorDown(1).cursorLeft(11)
+                    .a("│░░░░░░░░░│").cursorDown(1).cursorLeft(11)
+                    .a("└─────────┘"));
   }
 
   private void displayFinalGameState() {
